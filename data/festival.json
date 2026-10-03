@@ -1,0 +1,1838 @@
+{
+ "_doc": "Single config file driving the app. Replace to re-skin for another festival. Facts: see data/sources.md.",
+ "demoNotice": "영업 시연용 데모 — 공식 서비스 아님",
+ "festival": {
+  "id": "buyeo-baekje-72",
+  "name": "제72회 백제문화제",
+  "shortName": "백제문화제",
+  "edition": 72,
+  "region": "부여",
+  "theme": "아름다운 백제, 빛나는 사비",
+  "subTheme": "백제의 향연 - 기억을 넘어 미래로",
+  "startDate": "2026-10-03",
+  "endDate": "2026-10-11",
+  "dateLabel": "2026. 10. 3.(토) ~ 10. 11.(일) · 9일간",
+  "venues": [
+   "정림사지",
+   "석탑로",
+   "관북리 유적",
+   "의열로"
+  ],
+  "venueLabel": "부여 시가지 일원",
+  "mainVenue": "정림사지 (충남 부여군 부여읍 정림로 83)",
+  "host": "부여군",
+  "organizer": "백제문화재단",
+  "hours": "10:00~22:00 (부여)",
+  "fee": "무료",
+  "intro": "1955년 제1회 백제대제에서 시작된 백제문화제는 올해 72회를 맞는 대표 역사문화축제입니다. 올해는 사비백제의 흔적이 남은 부여 시가지에서 7개 분야 40여 개 프로그램으로 열립니다.",
+  "officialSite": "https://www.baekjeculturalfestival.kr/"
+ },
+ "theme": {
+  "main": "#1E2A4A",
+  "bg": "#F3EDE1",
+  "sub": "#C9A24B",
+  "accent": "#A33B2B",
+  "font": "#1E2A4A",
+  "card": "#FFFFFF"
+ },
+ "days": [
+  {
+   "date": "2026-10-02",
+   "label": "사전행사",
+   "dow": "금"
+  },
+  {
+   "date": "2026-10-03",
+   "label": "1일차",
+   "dow": "토"
+  },
+  {
+   "date": "2026-10-04",
+   "label": "2일차",
+   "dow": "일"
+  },
+  {
+   "date": "2026-10-05",
+   "label": "3일차",
+   "dow": "월"
+  },
+  {
+   "date": "2026-10-06",
+   "label": "4일차",
+   "dow": "화"
+  },
+  {
+   "date": "2026-10-07",
+   "label": "5일차",
+   "dow": "수"
+  },
+  {
+   "date": "2026-10-08",
+   "label": "6일차",
+   "dow": "목"
+  },
+  {
+   "date": "2026-10-09",
+   "label": "7일차",
+   "dow": "금"
+  },
+  {
+   "date": "2026-10-10",
+   "label": "8일차",
+   "dow": "토"
+  },
+  {
+   "date": "2026-10-11",
+   "label": "9일차",
+   "dow": "일"
+  }
+ ],
+ "categories": [
+  {
+   "key": "official",
+   "name": "공식",
+   "color": "#8E2F25"
+  },
+  {
+   "key": "main",
+   "name": "대표",
+   "color": "#B8892F"
+  },
+  {
+   "key": "ritual",
+   "name": "제례",
+   "color": "#5B4A7A"
+  },
+  {
+   "key": "experience",
+   "name": "체험·이벤트",
+   "color": "#2F6E62"
+  },
+  {
+   "key": "performance",
+   "name": "공연·경연",
+   "color": "#2B4C7E"
+  },
+  {
+   "key": "exhibition",
+   "name": "경관·전시",
+   "color": "#9C5A2E"
+  },
+  {
+   "key": "parallel",
+   "name": "병행",
+   "color": "#6B6B6B"
+  }
+ ],
+ "programs": [
+  {
+   "id": 1,
+   "cat": "official",
+   "title": "사비천도 선포식",
+   "venue": "정림사지 소무대",
+   "dates": [
+    "2026-10-03"
+   ],
+   "time": "17:00~19:00",
+   "desc": "사비 천도를 선포하고 대규모 천도 행렬로 축제의 문을 엽니다.",
+   "performers": [],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 2,
+   "cat": "official",
+   "title": "사비정도고유제",
+   "venue": "정림사지 일원",
+   "dates": [
+    "2026-10-03"
+   ],
+   "time": "18:00",
+   "desc": "개막에 앞서 열리는 고유제.",
+   "performers": [],
+   "note": null,
+   "always": false,
+   "source": "https://cc.newdaily.co.kr/site/data/html/2026/10/01/2026100100246.html"
+  },
+  {
+   "id": 3,
+   "cat": "official",
+   "title": "개막식",
+   "venue": "정림사지 주무대",
+   "dates": [
+    "2026-10-03"
+   ],
+   "time": "19:00~22:00",
+   "desc": "개막 의식, 축하공연, 식후 행사.",
+   "performers": [],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 4,
+   "cat": "official",
+   "title": "개막일 드론 아트쇼",
+   "venue": "정림사지 일원",
+   "dates": [
+    "2026-10-03"
+   ],
+   "time": "개막식 이후 (시각 미공개)",
+   "desc": "개막일 밤 드론 아트쇼와 미디어아트.",
+   "performers": [],
+   "note": null,
+   "always": false,
+   "source": "https://cc.newdaily.co.kr/site/data/html/2026/10/01/2026100100246.html"
+  },
+  {
+   "id": 5,
+   "cat": "official",
+   "title": "폐막식",
+   "venue": "정림사지 주무대",
+   "dates": [
+    "2026-10-11"
+   ],
+   "time": "18:30~21:30",
+   "desc": "9일간의 축제를 마무리하는 폐막 행사.",
+   "performers": [],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 6,
+   "cat": "main",
+   "title": "주제공연 「백제, 새로운 시대를 열다」",
+   "venue": "정림사지 주무대",
+   "dates": [
+    "2026-10-03"
+   ],
+   "time": "개막식 중 (19:00~22:00)",
+   "desc": "축제 주제를 담은 대표 공연 (개막식 내).",
+   "performers": [],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 7,
+   "cat": "main",
+   "title": "주제공연 「백제, 새로운 시대를 열다」",
+   "venue": "정림사지 주무대",
+   "dates": [
+    "2026-10-04"
+   ],
+   "time": "시각 미공개",
+   "desc": "축제 주제를 담은 대표 공연.",
+   "performers": [],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 8,
+   "cat": "main",
+   "title": "주제공연 「백제, 새로운 시대를 열다」",
+   "venue": "정림사지 주무대",
+   "dates": [
+    "2026-10-11"
+   ],
+   "time": "폐막식 중 (18:30~21:30)",
+   "desc": "축제 주제를 담은 대표 공연 (폐막식 내).",
+   "performers": [],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 9,
+   "cat": "main",
+   "title": "백제역사문화행렬",
+   "venue": "부여 시가지 일원",
+   "dates": [
+    "2026-10-09"
+   ],
+   "time": "15:30~17:00",
+   "desc": "사비 도읍기 왕 행차를 재현한 역사 행렬, 국외 교류단체 참여.",
+   "performers": [],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 10,
+   "cat": "main",
+   "title": "백제문화 나이트 퍼레이드",
+   "venue": "부여 시가지 일원",
+   "dates": [
+    "2026-10-10"
+   ],
+   "time": "19:30~20:30",
+   "desc": "미디어 기술을 더한 야간 퍼레이드.",
+   "performers": [],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 11,
+   "cat": "main",
+   "title": "주제전시관 (백제금동대향로)",
+   "venue": "관북리 유적",
+   "dates": [
+    "2026-10-03",
+    "2026-10-04",
+    "2026-10-05",
+    "2026-10-06",
+    "2026-10-07",
+    "2026-10-08",
+    "2026-10-09",
+    "2026-10-10",
+    "2026-10-11"
+   ],
+   "time": "10:00~22:00",
+   "desc": "백제금동대향로와 향로 속 동물 이야기를 주제로 한 전시.",
+   "performers": [],
+   "note": null,
+   "always": true,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 12,
+   "cat": "main",
+   "title": "백제의 기억 (사비 영상관)",
+   "venue": "정림사지 박물관 상영관",
+   "dates": [
+    "2026-10-03",
+    "2026-10-04",
+    "2026-10-05",
+    "2026-10-06",
+    "2026-10-07",
+    "2026-10-08",
+    "2026-10-09",
+    "2026-10-10",
+    "2026-10-11"
+   ],
+   "time": "10:00~20:00 (20분 단위 회차)",
+   "desc": "사비 천도부터 오늘까지 백제의 시간을 담은 영상.",
+   "performers": [],
+   "note": null,
+   "always": true,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 13,
+   "cat": "ritual",
+   "title": "고천제 : 백제혼불채화",
+   "venue": "충화 천등산 채화단",
+   "dates": [
+    "2026-10-02"
+   ],
+   "time": "09:30~11:30",
+   "desc": "백제 혼불 채화와 봉송 행렬.",
+   "performers": [],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 14,
+   "cat": "ritual",
+   "title": "팔충제",
+   "venue": "충화 팔충사",
+   "dates": [
+    "2026-10-02"
+   ],
+   "time": "11:30~12:30",
+   "desc": "백제 말 팔충신 추모 의식.",
+   "performers": [],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 15,
+   "cat": "ritual",
+   "title": "삼산제",
+   "venue": "부여 금성산 성화대",
+   "dates": [
+    "2026-10-02"
+   ],
+   "time": "18:00~19:00",
+   "desc": "삼산 신령께 올리는 의식.",
+   "performers": [],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 16,
+   "cat": "ritual",
+   "title": "백제대왕제",
+   "venue": "부여 왕릉원 숭목전",
+   "dates": [
+    "2026-10-03"
+   ],
+   "time": "11:00~12:00",
+   "desc": "온조왕과 사비 백제 6대왕 추모 의식.",
+   "performers": [],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 17,
+   "cat": "ritual",
+   "title": "삼충제",
+   "venue": "부소산 삼충사",
+   "dates": [
+    "2026-10-05"
+   ],
+   "time": "11:00~12:00",
+   "desc": "성충·흥수·계백의 충절을 기리는 의식.",
+   "performers": [],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 18,
+   "cat": "ritual",
+   "title": "오천결사대 충혼제",
+   "venue": "백제 오천결사대 충혼탑(서동공원)",
+   "dates": [
+    "2026-10-06"
+   ],
+   "time": "11:00~12:00",
+   "desc": "오천결사대를 추모하는 제의식.",
+   "performers": [],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 19,
+   "cat": "ritual",
+   "title": "백제궁녀제",
+   "venue": "부소산 궁녀사",
+   "dates": [
+    "2026-10-07"
+   ],
+   "time": "10:30~11:30",
+   "desc": "백제 여인들의 절개를 기리는 의식.",
+   "performers": [],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 20,
+   "cat": "ritual",
+   "title": "유왕산 추모제",
+   "venue": "양화면 유왕산 산정",
+   "dates": [
+    "2026-10-08"
+   ],
+   "time": "11:00~12:00",
+   "desc": "의자왕과 유민들을 위로하는 제의식.",
+   "performers": [],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 21,
+   "cat": "ritual",
+   "title": "임천충혼제",
+   "venue": "임천면 성흥산",
+   "dates": [
+    "2026-10-09"
+   ],
+   "time": "11:00~12:00",
+   "desc": "백제 무명 장졸 추모 제의식.",
+   "performers": [],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 22,
+   "cat": "ritual",
+   "title": "석성충혼제",
+   "venue": "석성산성 및 탑골공원",
+   "dates": [
+    "2026-10-10"
+   ],
+   "time": "11:00~12:00",
+   "desc": "나라를 지키다 산화한 장졸 추모.",
+   "performers": [],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 23,
+   "cat": "ritual",
+   "title": "수륙대재",
+   "venue": "구드래 선착장 주차장",
+   "dates": [
+    "2026-10-10"
+   ],
+   "time": "13:00~20:00",
+   "desc": "희생된 영혼을 위로하는 전통 불교 의례.",
+   "performers": [],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 24,
+   "cat": "ritual",
+   "title": "제례 헤리티지 투어 (사전 접수)",
+   "venue": "백제대왕제·삼충제·오천결사대 충혼제·유왕산 추모제",
+   "dates": [
+    "2026-10-03",
+    "2026-10-05",
+    "2026-10-06",
+    "2026-10-08"
+   ],
+   "time": "4회차 운영",
+   "desc": "제례 관람과 체험을 묶은 투어. 사전 접수자만 참가 가능.",
+   "performers": [],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 25,
+   "cat": "experience",
+   "title": "백제문화 체험 프로그램",
+   "venue": "석탑로",
+   "dates": [
+    "2026-10-03",
+    "2026-10-04",
+    "2026-10-05",
+    "2026-10-06",
+    "2026-10-07",
+    "2026-10-08",
+    "2026-10-09",
+    "2026-10-10",
+    "2026-10-11"
+   ],
+   "time": "10:00~20:00",
+   "desc": "다양한 백제 문화 체험.",
+   "performers": [],
+   "note": null,
+   "always": true,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 26,
+   "cat": "experience",
+   "title": "백제 성곽·무예 체험",
+   "venue": "석탑로",
+   "dates": [
+    "2026-10-03",
+    "2026-10-04",
+    "2026-10-05",
+    "2026-10-06",
+    "2026-10-07",
+    "2026-10-08",
+    "2026-10-09",
+    "2026-10-10",
+    "2026-10-11"
+   ],
+   "time": "10:00~21:00",
+   "desc": "백제 성곽과 무예 문화 체험.",
+   "performers": [],
+   "note": null,
+   "always": true,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 27,
+   "cat": "experience",
+   "title": "백제 연희단",
+   "venue": "정림사지, 석탑로",
+   "dates": [
+    "2026-10-03",
+    "2026-10-04",
+    "2026-10-05",
+    "2026-10-06",
+    "2026-10-07",
+    "2026-10-08",
+    "2026-10-09",
+    "2026-10-10",
+    "2026-10-11"
+   ],
+   "time": "상시 운영",
+   "desc": "백제 인물로 분장한 연희단과 함께하는 거리 프로그램.",
+   "performers": [],
+   "note": null,
+   "always": true,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 28,
+   "cat": "experience",
+   "title": "123 사비 체험 프로그램",
+   "venue": "정림사지 박물관",
+   "dates": [
+    "2026-10-03",
+    "2026-10-04",
+    "2026-10-05",
+    "2026-10-06",
+    "2026-10-07",
+    "2026-10-08",
+    "2026-10-09",
+    "2026-10-10",
+    "2026-10-11"
+   ],
+   "time": "10:00~18:00",
+   "desc": "공예 작가와 함께하는 백제 공예 체험.",
+   "performers": [],
+   "note": null,
+   "always": true,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 29,
+   "cat": "experience",
+   "title": "다 같이 놀자 사비 한 바퀴",
+   "venue": "정림사지 연지, 석탑로",
+   "dates": [
+    "2026-10-03",
+    "2026-10-04",
+    "2026-10-10",
+    "2026-10-11"
+   ],
+   "time": "평일 미운영",
+   "desc": "전 세대가 함께하는 공동체 놀이.",
+   "performers": [],
+   "note": "공식 안내: '평일 미운영'. 공휴일(10.5 대체공휴일, 10.9 한글날) 운영 여부는 공식 확인 필요.",
+   "always": true,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 30,
+   "cat": "experience",
+   "title": "계류식 열기구 체험",
+   "venue": "관북리 유적",
+   "dates": [
+    "2026-10-03",
+    "2026-10-04",
+    "2026-10-05",
+    "2026-10-09",
+    "2026-10-10",
+    "2026-10-11"
+   ],
+   "time": "일몰 후 3시간",
+   "desc": "하늘에서 부여 시가지를 내려다보는 계류식 열기구.",
+   "performers": [],
+   "note": "기상·현장 상황에 따라 운영이 제한될 수 있음.",
+   "always": true,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 31,
+   "cat": "experience",
+   "title": "추억을 남겨 드려유~",
+   "venue": "석탑로",
+   "dates": [
+    "2026-10-03",
+    "2026-10-04",
+    "2026-10-05",
+    "2026-10-06",
+    "2026-10-07",
+    "2026-10-08",
+    "2026-10-09",
+    "2026-10-10",
+    "2026-10-11"
+   ],
+   "time": "10:00~20:00",
+   "desc": "혁필화, 엽서 등 선착순 기념품 증정.",
+   "performers": [],
+   "note": null,
+   "always": true,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 32,
+   "cat": "experience",
+   "title": "백제성 어드벤처",
+   "venue": "정림사지",
+   "dates": [
+    "2026-10-03",
+    "2026-10-04",
+    "2026-10-05",
+    "2026-10-06",
+    "2026-10-07",
+    "2026-10-08",
+    "2026-10-09",
+    "2026-10-10",
+    "2026-10-11"
+   ],
+   "time": "상시",
+   "desc": "백제 요소를 결합한 에어바운스 놀이·체험.",
+   "performers": [],
+   "note": null,
+   "always": true,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 33,
+   "cat": "experience",
+   "title": "사비 로블록스 체험",
+   "venue": "정림사지 주무대 주변",
+   "dates": [
+    "2026-10-03",
+    "2026-10-04",
+    "2026-10-05",
+    "2026-10-06",
+    "2026-10-07",
+    "2026-10-08",
+    "2026-10-09",
+    "2026-10-10",
+    "2026-10-11"
+   ],
+   "time": "상시 운영",
+   "desc": "로블록스 게임 속 백제 세상 탐험.",
+   "performers": [],
+   "note": null,
+   "always": true,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 34,
+   "cat": "experience",
+   "title": "사비 로블록스 대회",
+   "venue": "정림사지 주무대",
+   "dates": [
+    "2026-10-03"
+   ],
+   "time": "11:00",
+   "desc": "유튜브 크리에이터 겜브링 참여 대회.",
+   "performers": [],
+   "note": "대회 접수: 10.3·4·5·9·10·11 09:30부터 주무대 뒤 체험존 현장 접수(선착순 15명). 출처: 공식 축제소식 2026-10-02",
+   "always": false,
+   "source": "https://www.culturegb.com/news/view.php?idx=2227"
+  },
+  {
+   "id": 35,
+   "cat": "performance",
+   "title": "개막 축하 공연",
+   "venue": "정림사지 주무대",
+   "dates": [
+    "2026-10-03"
+   ],
+   "time": "20:00~21:30",
+   "desc": "정림사지 주무대 문화예술 공연.",
+   "performers": [
+    "싸이펀",
+    "순순희",
+    "키라스",
+    "트리플S"
+   ],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 36,
+   "cat": "performance",
+   "title": "사비 가을 트로트",
+   "venue": "정림사지 주무대",
+   "dates": [
+    "2026-10-04"
+   ],
+   "time": "20:00~22:00",
+   "desc": "정림사지 주무대 문화예술 공연.",
+   "performers": [
+    "박가연",
+    "윤서원",
+    "정서주",
+    "유지나",
+    "장윤정"
+   ],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 37,
+   "cat": "performance",
+   "title": "KBS와 함께하는 부여의 별밤 콘서트",
+   "venue": "정림사지 주무대",
+   "dates": [
+    "2026-10-05"
+   ],
+   "time": "19:00~21:00",
+   "desc": "정림사지 주무대 문화예술 공연.",
+   "performers": [
+    "환희",
+    "알리",
+    "안치환",
+    "김범룡",
+    "정유진",
+    "서영은"
+   ],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 38,
+   "cat": "performance",
+   "title": "백제의 가을밤, 사비 달빛 음악회",
+   "venue": "정림사지 주무대",
+   "dates": [
+    "2026-10-06"
+   ],
+   "time": "19:00~21:00",
+   "desc": "정림사지 주무대 문화예술 공연.",
+   "performers": [
+    "임지훈",
+    "붐비트 브라스밴드",
+    "소리새",
+    "퓨전국악 하늘",
+    "싱어송라이터 신나"
+   ],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 39,
+   "cat": "performance",
+   "title": "사비 트롯 페스타",
+   "venue": "정림사지 주무대",
+   "dates": [
+    "2026-10-07"
+   ],
+   "time": "19:30~21:30",
+   "desc": "정림사지 주무대 문화예술 공연.",
+   "performers": [
+    "조승구&조은하",
+    "김경민",
+    "빈예서",
+    "하이량",
+    "하동근",
+    "안소미"
+   ],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 40,
+   "cat": "performance",
+   "title": "백마강 가요제",
+   "venue": "정림사지 주무대",
+   "dates": [
+    "2026-10-08"
+   ],
+   "time": "18:00~21:00",
+   "desc": "정림사지 주무대 문화예술 공연.",
+   "performers": [
+    "미스김",
+    "정미애",
+    "조성환",
+    "조은정",
+    "홍준보",
+    "남진"
+   ],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 41,
+   "cat": "performance",
+   "title": "한·중·일 문화 교류 공연 「사비, 천오백 년의 인연을 잇다」",
+   "venue": "정림사지 주무대",
+   "dates": [
+    "2026-10-09"
+   ],
+   "time": "19:00~21:00",
+   "desc": "정림사지 주무대 문화예술 공연.",
+   "performers": [
+    "중국 낙양",
+    "백제국악관현악단",
+    "백제가야금연주단",
+    "일본 다자이후 예술단"
+   ],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 42,
+   "cat": "performance",
+   "title": "사비 가을 발라드",
+   "venue": "정림사지 주무대",
+   "dates": [
+    "2026-10-10"
+   ],
+   "time": "21:00~22:00",
+   "desc": "정림사지 주무대 문화예술 공연.",
+   "performers": [
+    "울랄라세션",
+    "전상근"
+   ],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 43,
+   "cat": "performance",
+   "title": "폐막 축하 공연",
+   "venue": "정림사지 주무대",
+   "dates": [
+    "2026-10-11"
+   ],
+   "time": "20:00~21:00",
+   "desc": "정림사지 주무대 문화예술 공연.",
+   "performers": [
+    "조나주",
+    "김보경",
+    "오드유스",
+    "인순이"
+   ],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 44,
+   "cat": "performance",
+   "title": "세도두레풍장",
+   "venue": "정림사지 연지",
+   "dates": [
+    "2026-10-03"
+   ],
+   "time": "11:00~12:00",
+   "desc": "전통 민속 공연 · 세도면 동사리 마을의 공동체 풍물놀이.",
+   "performers": [],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 45,
+   "cat": "performance",
+   "title": "산유화가",
+   "venue": "정림사지 연지",
+   "dates": [
+    "2026-10-03"
+   ],
+   "time": "15:00~16:00",
+   "desc": "전통 민속 공연 · 김매기 노동요.",
+   "performers": [],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 46,
+   "cat": "performance",
+   "title": "세도가회리장군제",
+   "venue": "정림사지 연지",
+   "dates": [
+    "2026-10-04"
+   ],
+   "time": "11:00~12:00",
+   "desc": "전통 민속 공연 · 무병과 풍년을 비는 향토제.",
+   "performers": [],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 47,
+   "cat": "performance",
+   "title": "은산별신제",
+   "venue": "정림사지 연지",
+   "dates": [
+    "2026-10-04"
+   ],
+   "time": "15:00~16:00",
+   "desc": "전통 민속 공연 · 토속신앙과 군대 의식이 어우러진 제전.",
+   "performers": [],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 48,
+   "cat": "performance",
+   "title": "은산내지리단잡기",
+   "venue": "정림사지 연지",
+   "dates": [
+    "2026-10-10"
+   ],
+   "time": "15:00~16:00",
+   "desc": "전통 민속 공연 · 괴질을 함께 이겨내는 전통 민속놀이.",
+   "performers": [],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 49,
+   "cat": "performance",
+   "title": "초촌추양리두레풍장",
+   "venue": "정림사지 연지",
+   "dates": [
+    "2026-10-11"
+   ],
+   "time": "11:00~12:00",
+   "desc": "전통 민속 공연 · 추양리 마을에 전승되는 두레 풍장.",
+   "performers": [],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 50,
+   "cat": "performance",
+   "title": "용정리상여소리",
+   "venue": "정림사지",
+   "dates": [
+    "2026-10-11"
+   ],
+   "time": "14:00~15:00",
+   "desc": "전통 민속 공연 · 빈 상여를 메고 마을을 도는 풍습을 담은 공연.",
+   "performers": [],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 51,
+   "cat": "performance",
+   "title": "가족·어린이 공연 무대",
+   "venue": "궁남사거리 이동무대",
+   "dates": [
+    "2026-10-03",
+    "2026-10-04",
+    "2026-10-05",
+    "2026-10-06",
+    "2026-10-07",
+    "2026-10-08",
+    "2026-10-09",
+    "2026-10-10",
+    "2026-10-11"
+   ],
+   "time": "기간 중 상시",
+   "desc": "어린이·가족 참여형 공연과 야간 청년 콘텐츠.",
+   "performers": [],
+   "note": null,
+   "always": true,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 52,
+   "cat": "performance",
+   "title": "부여 예술인 한마당",
+   "venue": "관북리 유적 삼거리 이동무대",
+   "dates": [
+    "2026-10-03",
+    "2026-10-04",
+    "2026-10-05",
+    "2026-10-06",
+    "2026-10-07",
+    "2026-10-08",
+    "2026-10-09",
+    "2026-10-10",
+    "2026-10-11"
+   ],
+   "time": "상설",
+   "desc": "지역 예술인·생활문화 동아리 상시 무대.",
+   "performers": [],
+   "note": null,
+   "always": true,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 53,
+   "cat": "performance",
+   "title": "위대한 태권도 공연",
+   "venue": "정림사지 주무대",
+   "dates": [
+    "2026-10-04"
+   ],
+   "time": "11:30~12:00 / 14:30~15:00",
+   "desc": "태권 군무 퍼포먼스 (2회).",
+   "performers": [],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 54,
+   "cat": "performance",
+   "title": "일본 구마모토 바톤투어링 공연",
+   "venue": "정림사지 주무대",
+   "dates": [
+    "2026-10-04"
+   ],
+   "time": "18:00~18:30",
+   "desc": "구마모토 바톤투어링 팀 초청 공연.",
+   "performers": [],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 55,
+   "cat": "performance",
+   "title": "일본 구마모토 바톤투어링 공연",
+   "venue": "정림사지 주무대",
+   "dates": [
+    "2026-10-05"
+   ],
+   "time": "15:00~15:30",
+   "desc": "구마모토 바톤투어링 팀 초청 공연.",
+   "performers": [],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 56,
+   "cat": "performance",
+   "title": "전통 무예 시연 - 백제 싸울아비 무사단",
+   "venue": "석탑로 일원",
+   "dates": [
+    "2026-10-06",
+    "2026-10-07",
+    "2026-10-08",
+    "2026-10-09",
+    "2026-10-10",
+    "2026-10-11"
+   ],
+   "time": "시각 미공개",
+   "desc": "백제 무사의 기상을 보여주는 무예 시연.",
+   "performers": [],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 57,
+   "cat": "performance",
+   "title": "사비를 품은 열린음악회 - 부여군민오케스트라",
+   "venue": "정림사지 주무대",
+   "dates": [
+    "2026-10-06"
+   ],
+   "time": "18:00~18:40",
+   "desc": "군민 참여 오케스트라 공연.",
+   "performers": [],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 58,
+   "cat": "performance",
+   "title": "백제 미마지 탈춤 공연",
+   "venue": "정림사지 연지",
+   "dates": [
+    "2026-10-10"
+   ],
+   "time": "11:00~12:00",
+   "desc": "미마지가 일본에 전한 기악탈춤 공연.",
+   "performers": [],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 59,
+   "cat": "performance",
+   "title": "부여청소년오케스트라 합동연주회 - 백제의 향연",
+   "venue": "정림사지 주무대",
+   "dates": [
+    "2026-10-10"
+   ],
+   "time": "18:00~19:30",
+   "desc": "부여·괴산·신안·해남 청소년오케스트라 합동 연주.",
+   "performers": [
+    "김기태",
+    "김신원(소프라노)",
+    "박상돈(바리톤)",
+    "박희재(퍼커셔니스트)"
+   ],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 60,
+   "cat": "exhibition",
+   "title": "사비야(夜)",
+   "venue": "부여 시가지 일원",
+   "dates": [
+    "2026-10-02",
+    "2026-10-03",
+    "2026-10-04",
+    "2026-10-05",
+    "2026-10-06",
+    "2026-10-07",
+    "2026-10-08",
+    "2026-10-09",
+    "2026-10-10",
+    "2026-10-11"
+   ],
+   "time": "상설",
+   "desc": "백제 유등과 경관 조명 포토존.",
+   "performers": [],
+   "note": null,
+   "always": true,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 61,
+   "cat": "exhibition",
+   "title": "미디어아트 「빛나는 사비, 탑과 경전」",
+   "venue": "정림사지 오층석탑",
+   "dates": [
+    "2026-10-02",
+    "2026-10-03",
+    "2026-10-04",
+    "2026-10-05",
+    "2026-10-06",
+    "2026-10-07",
+    "2026-10-08",
+    "2026-10-09",
+    "2026-10-10",
+    "2026-10-11"
+   ],
+   "time": "매일 주무대 공연 종료 후",
+   "desc": "오층석탑 미디어아트.",
+   "performers": [],
+   "note": null,
+   "always": true,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 62,
+   "cat": "exhibition",
+   "title": "미디어아트로드 「사비 저잣거리」",
+   "venue": "석탑로, 정림사지 박물관",
+   "dates": [
+    "2026-10-03",
+    "2026-10-04",
+    "2026-10-05",
+    "2026-10-06",
+    "2026-10-07",
+    "2026-10-08",
+    "2026-10-09",
+    "2026-10-10",
+    "2026-10-11"
+   ],
+   "time": "18:00~22:00",
+   "desc": "사비도성 저잣거리를 재해석한 미디어아트 길.",
+   "performers": [],
+   "note": null,
+   "always": true,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 63,
+   "cat": "exhibition",
+   "title": "사비백제 123년의 빛",
+   "venue": "정림사지 솔밭길",
+   "dates": [
+    "2026-10-03",
+    "2026-10-04",
+    "2026-10-05",
+    "2026-10-06",
+    "2026-10-07",
+    "2026-10-08",
+    "2026-10-09",
+    "2026-10-10",
+    "2026-10-11"
+   ],
+   "time": "18:00~22:00",
+   "desc": "한지 유등을 대여해 함께 완성하는 빛 전시.",
+   "performers": [],
+   "note": null,
+   "always": true,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 64,
+   "cat": "exhibition",
+   "title": "부여서예협회전",
+   "venue": "정림사지 박물관 1층 로비",
+   "dates": [
+    "2026-10-03",
+    "2026-10-04",
+    "2026-10-05",
+    "2026-10-06",
+    "2026-10-07",
+    "2026-10-08",
+    "2026-10-09",
+    "2026-10-10",
+    "2026-10-11"
+   ],
+   "time": "10:00~21:00",
+   "desc": "백제 목간을 현대 서예로 재해석한 전시.",
+   "performers": [],
+   "note": null,
+   "always": true,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 65,
+   "cat": "exhibition",
+   "title": "백제문화제 사진전시회",
+   "venue": "의열로",
+   "dates": [
+    "2026-10-03",
+    "2026-10-04",
+    "2026-10-05",
+    "2026-10-06",
+    "2026-10-07",
+    "2026-10-08",
+    "2026-10-09",
+    "2026-10-10",
+    "2026-10-11"
+   ],
+   "time": "상설",
+   "desc": "백제문화제와 부여 풍경 사진 전시.",
+   "performers": [],
+   "note": null,
+   "always": true,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 66,
+   "cat": "parallel",
+   "title": "제19회 충청남도교육감기 바둑대회",
+   "venue": "부여군민체육관",
+   "dates": [
+    "2026-10-03"
+   ],
+   "time": "10:00~17:00",
+   "desc": "충남 초·중·고 학생 바둑대회.",
+   "performers": [],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 67,
+   "cat": "parallel",
+   "title": "백마강 코스모스단지",
+   "venue": "구드래 둔치 및 신리 일원",
+   "dates": [
+    "2026-10-03",
+    "2026-10-04",
+    "2026-10-05",
+    "2026-10-06",
+    "2026-10-07",
+    "2026-10-08",
+    "2026-10-09",
+    "2026-10-10",
+    "2026-10-11"
+   ],
+   "time": "기간 미표기",
+   "desc": "백마강변 코스모스 경관.",
+   "performers": [],
+   "note": "공식 페이지에 운영 기간 표기 없음.",
+   "always": true,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 68,
+   "cat": "parallel",
+   "title": "백제역사문화탐방 시티투어·야간관광·팸투어",
+   "venue": "부여군 일원",
+   "dates": [
+    "2026-10-03",
+    "2026-10-04",
+    "2026-10-05",
+    "2026-10-06",
+    "2026-10-07",
+    "2026-10-08",
+    "2026-10-09",
+    "2026-10-10",
+    "2026-10-11"
+   ],
+   "time": "상품별 상이",
+   "desc": "부여 역사문화 탐방 관광상품.",
+   "performers": [],
+   "note": null,
+   "always": true,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 69,
+   "cat": "parallel",
+   "title": "부여 북페어 「백제의 향기, 책의 향연 - 부여·여유」",
+   "venue": "관북리 유적(객사)",
+   "dates": [
+    "2026-10-03",
+    "2026-10-04",
+    "2026-10-05"
+   ],
+   "time": "시각 미공개",
+   "desc": "독립출판 마켓, 북토크, 어린이 체험.",
+   "performers": [],
+   "note": null,
+   "always": true,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 70,
+   "cat": "parallel",
+   "title": "한국화가 이호신 기증전 (부여의 숨결과 꿈)",
+   "venue": "부여문화원 전시실",
+   "dates": [
+    "2026-10-02",
+    "2026-10-03",
+    "2026-10-04",
+    "2026-10-05",
+    "2026-10-06",
+    "2026-10-07",
+    "2026-10-08",
+    "2026-10-09",
+    "2026-10-10",
+    "2026-10-11"
+   ],
+   "time": "10:00~18:00 (일요일·공휴일 휴관, ~11.14)",
+   "desc": "부여를 그린 한국화 기증전.",
+   "performers": [],
+   "note": null,
+   "always": true,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  },
+  {
+   "id": 71,
+   "cat": "parallel",
+   "title": "백제문화제 낙화놀이",
+   "venue": "구드래 둔치",
+   "dates": [
+    "2026-10-10"
+   ],
+   "time": "19:00~21:00",
+   "desc": "구드래 둔치의 전통 불꽃놀이.",
+   "performers": [],
+   "note": null,
+   "always": false,
+   "source": "https://www.baekjeculturalfestival.kr/@soda/pages/program_glance.php"
+  }
+ ],
+ "map": {
+  "center": [
+   36.28,
+   126.9125
+  ],
+  "zoom": 16,
+  "categories": [
+   {
+    "key": "all",
+    "name": "전체"
+   },
+   {
+    "key": "venue",
+    "name": "행사장",
+    "color": "#8E2F25"
+   },
+   {
+    "key": "shuttle",
+    "name": "셔틀 정류장",
+    "color": "#2B4C7E"
+   },
+   {
+    "key": "parking",
+    "name": "주차장",
+    "color": "#2F6E62"
+   },
+   {
+    "key": "info",
+    "name": "안내·교통",
+    "color": "#B8892F"
+   },
+   {
+    "key": "toilet",
+    "name": "화장실",
+    "color": "#5B4A7A"
+   }
+  ],
+  "markers": [
+   {
+    "cat": "venue",
+    "name": "정림사지 (주행사장 · 주무대)",
+    "lat": 36.2792635,
+    "lng": 126.9144085,
+    "desc": "충남 부여군 부여읍 정림로 83 · 개막식/폐막식/주무대 공연",
+    "verified": true,
+    "source": "https://www.openstreetmap.org/way/366966600"
+   },
+   {
+    "cat": "venue",
+    "name": "정림사지 오층석탑 (미디어아트)",
+    "lat": 36.2793431,
+    "lng": 126.9132858,
+    "desc": "미디어아트 「빛나는 사비, 탑과 경전」",
+    "verified": true,
+    "source": "https://www.openstreetmap.org/way/860922356"
+   },
+   {
+    "cat": "venue",
+    "name": "정림사지박물관",
+    "lat": 36.2792287,
+    "lng": 126.9151939,
+    "desc": "사비 영상관 · 123 사비 체험 · 부여서예협회전",
+    "verified": true,
+    "source": "https://www.openstreetmap.org/way/860922355"
+   },
+   {
+    "cat": "venue",
+    "name": "관북리 유적 (주제전시관 · 열기구)",
+    "lat": 36.285206,
+    "lng": 126.91213,
+    "desc": "주제전시관(백제금동대향로), 계류식 열기구",
+    "verified": true,
+    "source": "https://www.openstreetmap.org/way/1187606867"
+   },
+   {
+    "cat": "venue",
+    "name": "부여객사 (부여 북페어)",
+    "lat": 36.28501,
+    "lng": 126.912198,
+    "desc": "10.3~10.5 부여 북페어",
+    "verified": true,
+    "source": "https://www.openstreetmap.org/way/1187606875"
+   },
+   {
+    "cat": "venue",
+    "name": "부여문화원 (이호신 기증전)",
+    "lat": 36.279167,
+    "lng": 126.917397,
+    "desc": "한국화가 이호신 기증전",
+    "verified": true,
+    "source": "https://www.openstreetmap.org/way/255027249"
+   },
+   {
+    "cat": "shuttle",
+    "name": "군청 로터리 (셔틀 하차장)",
+    "lat": 36.276179,
+    "lng": 126.910517,
+    "desc": "1·2·3노선 경유 · 하차",
+    "verified": true,
+    "source": "https://www.openstreetmap.org/node/5153275823"
+   },
+   {
+    "cat": "shuttle",
+    "name": "보건소 로터리 (셔틀 승차장)",
+    "lat": 36.283053,
+    "lng": 126.910375,
+    "desc": "1·2·3노선 순환 지점 · 승차 (부여보건소 옆 회전교차로)",
+    "verified": true,
+    "source": "https://www.openstreetmap.org/way/587638119"
+   },
+   {
+    "cat": "shuttle",
+    "name": "부여 롯데리조트 (3노선 승·하차)",
+    "lat": 36.304065,
+    "lng": 126.901409,
+    "desc": "3노선 출발 · 25~35분 간격 (리조트 위치 기준, 정류 지점 '회랑'의 정확한 좌표는 미확인)",
+    "verified": true,
+    "source": "https://www.openstreetmap.org/node/13414962380"
+   },
+   {
+    "cat": "parking",
+    "name": "구드래 주차장 (1노선 승·하차) — 위치 근사",
+    "lat": 36.288837,
+    "lng": 126.908052,
+    "desc": "공식 주소: 부여읍 구교리 15-3 · OSM 명칭 미등록 주차장 중 근사 위치로 표시 (예시)",
+    "verified": false,
+    "source": "https://www.openstreetmap.org/way/1462986215"
+   },
+   {
+    "cat": "parking",
+    "name": "궁남지 주차장",
+    "lat": 36.271975,
+    "lng": 126.91326,
+    "desc": "공식 '궁남지 주차장'(서문·동문·서동문화관) 권역 · 개별 주차장과의 일치 여부 미확인",
+    "verified": true,
+    "source": "https://www.openstreetmap.org/way/471104244"
+   },
+   {
+    "cat": "info",
+    "name": "부여군 관광안내소 (관북리)",
+    "lat": 36.28362,
+    "lng": 126.914514,
+    "desc": "공식 '관광 안내소 주차장(대형버스 전용, 관북리 77)' 인근",
+    "verified": true,
+    "source": "https://www.openstreetmap.org/node/368633405"
+   },
+   {
+    "cat": "info",
+    "name": "부여시외버스터미널",
+    "lat": 36.2802546,
+    "lng": 126.9101132,
+    "desc": "대중교통 이용 시 · 석탑로 서쪽",
+    "verified": true,
+    "source": "https://www.openstreetmap.org/way/469665318"
+   },
+   {
+    "cat": "toilet",
+    "name": "공중화장실 (궁남지 주차장 옆)",
+    "lat": 36.272319,
+    "lng": 126.91394,
+    "desc": "OpenStreetMap 등록 화장실",
+    "verified": true,
+    "source": "https://www.openstreetmap.org/node/13115637504"
+   }
+  ]
+ },
+ "shuttle": {
+  "period": "2026.10.3.(토) ~ 10.11.(일)",
+  "hours": "매일 09:00 ~ 23:00",
+  "fare": "무료",
+  "routes": [
+   {
+    "no": 1,
+    "name": "1노선 (구드래 주차장)",
+    "color": "#B8322A",
+    "interval": "5~15분 간격 (탄력 운행)",
+    "stops": [
+     "구드래 주차장 (승·하차)",
+     "군청 로터리 (하차)",
+     "보건소 로터리 (승차 · 순환)"
+    ]
+   },
+   {
+    "no": 2,
+    "name": "2노선 (백마강 테마파크)",
+    "color": "#2B5DA8",
+    "interval": "5~15분 간격 (탄력 운행)",
+    "stops": [
+     "백마강 테마파크 주차장 (승·하차)",
+     "군청 로터리 (하차)",
+     "보건소 로터리 (승차 · 순환)"
+    ]
+   },
+   {
+    "no": 3,
+    "name": "3노선 (부여 롯데리조트)",
+    "color": "#5E9E3A",
+    "interval": "25~35분 간격 (탄력 운행)",
+    "stops": [
+     "부여 롯데리조트 회랑 (승·하차)",
+     "군청 로터리 (하차)",
+     "보건소 로터리 (승차 · 순환)"
+    ]
+   }
+  ],
+  "note": "공식 자료는 운행 간격만 공개하며 회차별 출발 시각표는 공개되지 않았습니다. 아래 '다음 셔틀 예상'은 공개된 간격(최대값) 기준의 계산 예시입니다.",
+  "source": "https://www.baekjeculturalfestival.kr/@soda/pages/festa_route.php"
+ },
+ "parking": {
+  "festival": [
+   {
+    "no": "1",
+    "name": "구드래 주차장 (주 주차장)",
+    "addr": "부여읍 구교리 15-3",
+    "sub": "1-1 구드래 주차장(상) · 1-2 구드래 주차장(하)",
+    "shuttle": "1노선"
+   },
+   {
+    "no": "2",
+    "name": "백마강 테마파크 주차장",
+    "addr": "부여읍 군수리 381",
+    "shuttle": "2노선"
+   },
+   {
+    "no": "3",
+    "name": "궁남지 주차장",
+    "addr": "서문 주차장(동남리 172-1) · 동문 주차장(동남리 152-1, 대형버스 전용) · 서동문화관 주차장(동남리 135-1)"
+   },
+   {
+    "no": "4",
+    "name": "관광 안내소 주차장 (대형버스 전용)",
+    "addr": "부여읍 관북리 77"
+   }
+  ],
+  "freePublic": {
+   "period": "10.3.(토) ~ 10.11.(일) 무료 개방",
+   "lots": [
+    "부여공영주차타워 (구아리 272)",
+    "사비로 노상 공영주차장 (군청 로터리~보건소 로터리)",
+    "구아3리 제2쌈지주차장 (구아리 343)",
+    "구아4리 공영주차장 (구아리 374 일원)",
+    "부여읍 공영주차장 (구아리 317 일원)",
+    "부여시장 공영주차장 (구아리 411-1 일원)",
+    "부여 중앙시장 공영주차장 (구아리 179-2 일원)"
+   ]
+  },
+  "enforcement": "9.24 ~ 10.11 고정식·이동식 CCTV 불법주정차 단속 유예. 단, 주민신고제 8개 구역(횡단보도·교차로 모퉁이·버스정류소·어린이보호구역·인도·소화전·안전지대·황색복선)은 정상 단속.",
+  "sources": [
+   "https://www.baekjeculturalfestival.kr/@soda/pages/festa_parking.php",
+   "https://www.newstnt.com/news/articleView.html?idxno=719616",
+   "https://chungnamzine.com/11045"
+  ]
+ },
+ "notices": [
+  {
+   "id": 24,
+   "type": "NOTICE",
+   "title": "로블록스 대회 참가 신청 안내",
+   "date": "2026-10-02",
+   "url": "https://www.baekjeculturalfestival.kr/bbs/board.php?bo_table=news&wr_id=24",
+   "summary": "10.3·4·5·9·10·11 운영일 09:30부터 정림사지 주무대 뒤 체험존에서 현장 접수, 선착순 15명."
+  },
+  {
+   "id": 23,
+   "type": "NOTICE",
+   "title": "제2회 부여 북페어 (제72회 백제문화제 연계프로그램)",
+   "date": "2026-09-28",
+   "url": "https://www.baekjeculturalfestival.kr/bbs/board.php?bo_table=news&wr_id=23",
+   "summary": "10.3~10.5 관북리 유적(객사)."
+  },
+  {
+   "id": 21,
+   "type": "NOTICE",
+   "title": "제72회 백제문화제 출연가수 라인업 & 공연일정 안내",
+   "date": "2026-09-27",
+   "url": "https://www.baekjeculturalfestival.kr/bbs/board.php?bo_table=news&wr_id=21",
+   "summary": "정림사지 주무대 일자별 공연 — 앱 '프로그램' 탭에서 확인."
+  },
+  {
+   "id": 20,
+   "type": "NOTICE",
+   "title": "2026년 제72회 백제문화제 개최 안내",
+   "date": "2026-08-31",
+   "url": "https://www.baekjeculturalfestival.kr/bbs/board.php?bo_table=news&wr_id=20",
+   "summary": "10.3~10.11, 부여 시가지 일원."
+  },
+  {
+   "id": 22,
+   "type": "EVENT",
+   "title": "굿뜨래페이 소비촉진행사",
+   "date": "2026-09-27",
+   "url": "https://www.baekjeculturalfestival.kr/bbs/board.php?bo_table=news&wr_id=22",
+   "summary": "전통시장 4곳(부여시장·중앙시장·부여새시장·홍산시장)에서 굿뜨래페이로 하루 3만4천원 이상 결제 시 1만원, 6만7천원 이상 시 추가 1만원(기간 중 최대 2만원). 그 외 가맹점 5만원 이상 결제 시 1만원권 기프트카드 1회(행사장 12:00~20:00 수령, 일부 업종 제외).",
+   "source": "https://cc.newdaily.co.kr/site/data/html/2026/10/01/2026100100246.html"
+  },
+  {
+   "id": 19,
+   "type": "EVENT",
+   "title": "제72회 백제문화제 AI 영상 공모전",
+   "date": "2026-02-02",
+   "url": "https://www.baekjeculturalfestival.kr/bbs/board.php?bo_table=news&wr_id=19",
+   "summary": "세부 내용은 공식 게시글 참고."
+  }
+ ],
+ "faq": [
+  {
+   "q": "축제 기간과 장소는?",
+   "a": "2026년 10월 3일(토)~11일(일) 9일간, 부여 시가지 일원(정림사지·석탑로·관북리 유적 중심)에서 열립니다. 주행사장은 정림사지(부여읍 정림로 83)입니다. 제례 일부는 10월 2일(금)부터 시작합니다."
+  },
+  {
+   "q": "입장료가 있나요?",
+   "a": "관람료는 무료입니다. (일부 체험·사전접수 프로그램은 별도 안내를 확인하세요.)"
+  },
+  {
+   "q": "운영 시간은?",
+   "a": "부여 행사장 기준 10:00~22:00입니다. 프로그램별 시간은 '프로그램' 탭에서 확인하세요."
+  },
+  {
+   "q": "셔틀버스는 어떻게 이용하나요?",
+   "a": "기간 중 매일 09:00~23:00 무료 셔틀 3개 노선이 운행합니다. 1노선(구드래 주차장)·2노선(백마강 테마파크 주차장)은 5~15분, 3노선(부여 롯데리조트)은 25~35분 간격으로 군청 로터리·보건소 로터리를 순환합니다."
+  },
+  {
+   "q": "주차는 어디에 하나요?",
+   "a": "축제 주차장은 구드래(주 주차장), 백마강 테마파크, 궁남지, 관광 안내소(대형버스 전용)입니다. 10.3~10.11에는 부여군 유료 공영주차장 7곳이 무료 개방됩니다. 자세한 위치는 '주차 안내'를 확인하세요."
+  },
+  {
+   "q": "불법주정차 단속은?",
+   "a": "9.24~10.11 CCTV 단속이 유예되지만, 횡단보도·교차로 모퉁이·버스정류소·어린이보호구역 등 주민신고제 8개 구역은 정상 단속됩니다."
+  },
+  {
+   "q": "열기구는 언제 탈 수 있나요?",
+   "a": "관북리 유적에서 10.3~10.5, 10.9~10.11 일몰 시부터 3시간 운영합니다. 기상과 현장 상황에 따라 운영이 제한될 수 있습니다."
+  },
+  {
+   "q": "문의는 어디로 하나요?",
+   "a": "백제문화재단 부여문화관광진흥원 041-837-2517, 축제 기간 종합상황실 041-830-3910."
+  },
+  {
+   "q": "우천 시에도 진행하나요?",
+   "a": "[미확인] 2026년 우천 시 운영 방침은 아직 공지되지 않았습니다. 공식 '축제소식'을 확인하세요."
+  }
+ ],
+ "home": {
+  "menu": [
+   {
+    "name": "행사장 지도",
+    "summary": "행사장·셔틀·주차 위치 확인",
+    "url": "/map",
+    "icon": "map"
+   },
+   {
+    "name": "프로그램 안내",
+    "summary": "날짜별 공연·체험·제례 일정",
+    "url": "/program",
+    "icon": "program"
+   }
+  ],
+  "widgets": [
+   {
+    "name": "셔틀버스 안내",
+    "description": "무료 3개 노선",
+    "url": "/shuttle",
+    "icon": "bus"
+   },
+   {
+    "name": "오늘의 일정",
+    "description": "지금 뭐 하지?",
+    "url": "/program?day=today",
+    "icon": "calendar"
+   },
+   {
+    "name": "자주 묻는 질문",
+    "description": "궁금한 내용만 빠르게!",
+    "url": "/faq",
+    "icon": "faq"
+   },
+   {
+    "name": "주차 안내",
+    "description": "공영주차장 무료 개방",
+    "url": "/parking",
+    "icon": "parking"
+   }
+  ],
+  "down": [
+   {
+    "name": "공지사항",
+    "url": "/post/notice"
+   },
+   {
+    "name": "축제 정보",
+    "url": "/festival-info"
+   },
+   {
+    "name": "종합상황실",
+    "url": "tel:041-830-3910"
+   }
+  ]
+ },
+ "footer": {
+  "name": "제72회 백제문화제",
+  "address": "백제문화재단 부여문화관광진흥원 · 충남 부여군 부여읍 사비로 41 부여군민회관 1층",
+  "contact": "문의 041-837-2517 · 종합상황실 041-830-3910 (축제 기간)",
+  "copyright": "주최 부여군 · 주관 백제문화재단",
+  "officialUrl": "https://www.baekjeculturalfestival.kr/",
+  "instagram": "https://instagram.com/buyeo_baekje_festival",
+  "youtube": "https://youtube.com/channel/UC2XjZ5uiAOMK2M-79c5ZsTQ"
+ }
+}
