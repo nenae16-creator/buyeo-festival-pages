@@ -215,3 +215,22 @@ a{color:inherit;text-decoration:none}
 .pin span{position:absolute;left:2px;top:0;width:24px;height:24px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--c);border:3px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.35)}
 .pin.approx span{background:#fff;border:3px dashed var(--c)}
 .map-note{bottom:24px;left:70px;right:auto}
+
+/* additions from the Siheung engine */
+.ended{margin:10px 16px 0;padding:9px 12px;border-radius:10px;background:#FBEDE7;border:1px solid #E7B9A8;color:#8A3A25;font-size:12.5px;font-weight:700;line-height:18px;word-break:keep-all}
+.finfo .ended{margin:0 0 4px}
+.ttable{width:100%;border-collapse:collapse;margin-top:8px;font-size:12.5px;line-height:17px}
+.ttable th{background:#EAF2F0;color:var(--main);font-weight:800;text-align:left;padding:6px 6px}
+.ttable td{border-top:1px solid #e3ece8;padding:6px 6px;color:#333;word-break:keep-all}
+.ctitle{font-size:14px;font-weight:800;color:var(--main);margin-bottom:4px}
+.cbody{font-size:13px;line-height:19px;color:#444}
+
+/* Buyeo MVP: foundation events calendar */
+.ev{display:flex;gap:12px;align-items:flex-start}
+.ev .when{flex:0 0 74px;text-align:center;border-radius:10px;background:#F8F4EA;padding:10px 4px;color:var(--main);font-weight:800;font-size:13px;line-height:18px}
+.ev .when b{display:block;font-size:20px;line-height:24px}
+.ev h3{font-size:16px;font-weight:800;margin:2px 0 4px}
+.ev p{font-size:13px;line-height:19px;color:#4a4a4a;margin:0}
+.ev .st{display:inline-block;font-size:11px;font-weight:800;border-radius:10px;padding:2px 8px;margin-bottom:4px;color:#fff}
+.ev .st.done{background:#8b8476}.ev .st.next{background:var(--accent)}.ev .st.now{background:#2F6E62}
+.ev .go{margin-top:8px;font-size:13px;font-weight:800;color:var(--accent);cursor:pointer}
