@@ -234,3 +234,35 @@ a{color:inherit;text-decoration:none}
 .ev .st{display:inline-block;font-size:11px;font-weight:800;border-radius:10px;padding:2px 8px;margin-bottom:4px;color:#fff}
 .ev .st.done{background:#8b8476}.ev .st.next{background:var(--accent)}.ev .st.now{background:#2F6E62}
 .ev .go{margin-top:8px;font-size:13px;font-weight:800;color:var(--accent);cursor:pointer}
+
+/* Buyeo MVP: map search + bottom sheet, lost & found, end popup */
+.map-search{margin-left:auto;margin-right:12px;width:150px;height:32px;border-radius:16px;border:1px solid #e3dccd;background:#f7f4ee;padding:0 12px;font:inherit;font-size:13px}
+.sheet{position:absolute;z-index:600;left:0;right:0;bottom:0;background:#fff;border-radius:16px 16px 0 0;box-shadow:0 -6px 20px rgba(0,0,0,.15);padding:10px 18px 22px}
+.sheet .grip{width:40px;height:4px;border-radius:2px;background:#ddd;margin:0 auto 12px}
+.sheet h3{font-size:18px;font-weight:800;margin:8px 0 4px}
+.sheet p{font-size:13px;line-height:19px;color:#444;margin:0 0 4px}
+.sheet .src{font-size:11px;color:#8b8476}
+.sheet-btns{display:flex;gap:8px;margin-top:12px}
+.sheet-btns a,.sheet-btns button{flex:1;text-align:center;padding:10px 0;border-radius:10px;font-size:13px;font-weight:800;border:0;cursor:pointer;text-decoration:none}
+.sheet-btns a{background:var(--main);color:#F6E7B4}.sheet-btns button{background:#f1ede4;color:var(--main)}
+.pcard .venue[data-url]{cursor:pointer;text-decoration:underline dotted}
+.lf-search{width:100%;height:40px;border-radius:10px;border:1px solid #e3dccd;padding:0 12px;font:inherit;font-size:14px;background:#faf8f3}
+.empty-lf{text-align:center}.empty-lf h3{font-size:16px;font-weight:800;margin:6px 0}.empty-lf p{font-size:13px;line-height:19px;color:#555}
+.endpop{position:fixed;inset:0;z-index:9999;background:rgba(20,26,45,.55);display:flex;align-items:center;justify-content:center;padding:24px}
+.endpop .box{width:100%;max-width:340px;background:#fff;border-radius:18px;padding:24px 22px;text-align:center}
+.endpop .eyebrow{font-size:12px;font-weight:800;color:var(--accent)}
+.endpop h2{font-size:20px;font-weight:900;color:var(--main);margin:6px 0 10px}
+.endpop p{font-size:14px;line-height:21px;color:#444;margin:0 0 16px}
+.endpop button{display:block;width:100%;padding:12px 0;border-radius:12px;border:0;font:inherit;font-weight:800;margin-top:8px;cursor:pointer;background:var(--main);color:#F6E7B4}
+.endpop button.close{background:#f1ede4;color:var(--main)}
+
+/* Clean map: light basemap, icon badges with labels */
+.badge{position:relative;width:34px;height:34px}
+.badge b{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:var(--c);color:#fff;font-size:13px;font-weight:900;border:3px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.28);letter-spacing:-.5px}
+.badge.venue b{width:40px;height:40px;margin:-3px;font-size:18px;background:var(--main);color:#F6E7B4;border-color:#C9A24B}
+.badge.shuttle b{font-size:10px}.badge.toilet b{font-size:11px}
+.badge.approx b{border-style:dashed;opacity:.85}
+.badge em{position:absolute;top:38px;left:50%;transform:translateX(-50%);white-space:nowrap;font-style:normal;font-size:11px;font-weight:800;color:#1E2A4A;background:rgba(255,255,255,.92);padding:1px 6px;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.15)}
+.leaflet-container{background:#f3f1ec}
+.leaflet-tile-pane{filter:grayscale(.9) brightness(1.08) contrast(.85) sepia(.12)}
+.lowzoom .badge:not(.major) em{display:none}

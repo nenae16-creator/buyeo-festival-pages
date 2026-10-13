@@ -107,7 +107,7 @@ function Home() {
       ${demoBadge()}
     </div>
   </div></div>`;
-  slider($('#top'), heroes.length, { dots: $('#dots') }); slider($('#mid'), 2, { interval: 4000 }); bindLang();
+  slider($('#top'), heroes.length, { dots: $('#dots') }); slider($('#mid'), 2, { interval: 4000 }); bindLang(); endPopup();
 }
 
 function FestivalInfo() {
@@ -127,7 +127,7 @@ function programCard(p) {
   const c = catOf(p.cat);
   return `<div class="pcard"><div class="ptime">${esc(p.time || '시각 미공개')}</div><div class="pbody">
     <span class="chip-s" style="background:${c.color}">${esc(c.name)}</span><h3>${esc(p.title)}</h3>
-    <p class="venue">${I.pin}${esc(p.venue)}</p>${p.desc ? `<p class="desc">${esc(p.desc)}</p>` : ''}
+    <p class="venue" data-url="/map?q=${encodeURIComponent((p.venue || '').split(/[ (·]/)[0])}">${I.pin}${esc(p.venue)}</p>${p.desc ? `<p class="desc">${esc(p.desc)}</p>` : ''}
     ${p.performers.length ? `<p class="perf">출연 · ${p.performers.map(esc).join(', ')}</p>` : ''}${p.note ? `<p class="note">※ ${esc(p.note)}</p>` : ''}</div></div>`;
 }
 function Program() {
@@ -203,30 +203,58 @@ function Faq() {
 }
 
 function MapPage() {
-  const m = DATA.map, cats = m.categories;
-  let cat = route().query.get('cat') || 'all';
+  const m = DATA.map, cats = m.categories, q0 = route().query;
+  let cat = q0.get('cat') || 'all', term = q0.get('q') || '';
   root.innerHTML = `<div class="app"><div class="map-page">
-    <div class="map-head"><span data-back>${I.back}</span><h1>축제장 지도</h1></div>
+    <div class="map-head"><span data-back>${I.back}</span><h1>축제장 지도</h1>
+      <input class="map-search" id="mq" type="search" placeholder="장소 검색" value="${esc(term)}" aria-label="장소 검색"></div>
     <div id="map"></div>
     <div class="chips">${cats.map(c => `<span class="chip ${c.key === cat ? 'on' : ''}" data-cat="${c.key}">${c.color ? `<i class="dot" style="background:${c.color}"></i>` : ''}${esc(c.name)}</span>`).join('')}</div>
     <button class="locate" id="locate" aria-label="현재 위치">${I.locate}</button>
     <div class="map-note">${esc(m.note || '● 실선: 좌표 확인 · ◌ 점선: 위치 근사(예시)')}</div>
+    <div class="sheet" id="sheet" hidden></div>
   </div></div>`;
   const map = L.map('map', { zoomControl: false }).setView(m.center, m.zoom);
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
+  const tl = m.tiles || { url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png', attribution: '&copy; OpenStreetMap contributors' };
+  L.tileLayer(tl.url, { maxZoom: 19, subdomains: 'abcd', attribution: tl.attribution }).addTo(map);
+  // 행사장 외곽선(OSM에서 확인한 실제 경계만): 은은한 채움 + 굵은 테두리로 축제 공간을 한눈에
+  (m.areas || []).forEach(a => L.polygon(a.coords, { color: '#1E2A4A', weight: 3, fillColor: '#C9A24B', fillOpacity: .18, interactive: false }).addTo(map));
   const layer = L.layerGroup().addTo(map);
   const color = k => cats.find(c => c.key === k)?.color || '#333';
-  const draw = () => {
+  const GLYPH = { venue: '★', shuttle: '버스', parking: 'P', info: 'i', toilet: 'WC' };
+  const short = s => s.split(/ [(—]/)[0];
+  // 장소 상세는 하단 시트로. ?spot=번호 로 바로 열 수 있다(QR·공지 링크용).
+  const sheet = $('#sheet');
+  const openSpot = (x, k) => {
+    sheet.hidden = false;
+    sheet.innerHTML = `<div class="grip"></div><span class="chip-s" style="background:${color(x.cat)}">${esc(cats.find(c => c.key === x.cat)?.name || '')}</span>
+      <h3>${esc(x.name)}</h3><p>${esc(x.desc)}</p>
+      <p class="src">${x.verified ? (x.source.includes('openstreetmap') ? '좌표: OpenStreetMap' : '좌표: 공식 누리집 지도 링크') : '⚠ 위치 근사(예시)'} · <a href="${esc(x.source)}" target="_blank" rel="noopener">출처</a></p>
+      <div class="sheet-btns"><a href="https://map.kakao.com/link/to/${encodeURIComponent(x.name)},${x.lat},${x.lng}" target="_blank" rel="noopener">길찾기 (카카오맵)</a><button type="button" id="shareSpot">이 장소 링크 복사</button></div>`;
+    $('#shareSpot').onclick = () => { const u = location.href.split('#')[0] + '#/map?spot=' + k; navigator.clipboard?.writeText(u).then(() => alert('링크를 복사했습니다'), () => prompt('링크', u)); };
+    replaceRoute('/map?spot=' + k);
+    map.setView([x.lat, x.lng], Math.max(map.getZoom(), 17));
+  };
+  map.on('click', () => { sheet.hidden = true; });
+  // 멀리서 볼 때는 주요 표식(major) 이름표만, 확대(17 이상)하면 전부 표시 — 이름표 겹침 방지
+  const zoomCls = () => map.getContainer().classList.toggle('lowzoom', map.getZoom() < 17);
+  map.on('zoomend', zoomCls); zoomCls();
+  const match = x => !term || (x.name + ' ' + x.desc).includes(term);
+  const draw = (fit = true) => {
     layer.clearLayers(); const pts = [];
-    m.markers.filter(x => cat === 'all' || x.cat === cat).forEach(x => {
-      const html = `<div class="pin ${x.verified ? '' : 'approx'}" style="--c:${color(x.cat)}"><span></span></div>`;
-      L.marker([x.lat, x.lng], { zIndexOffset: x.cat === 'venue' ? 1000 : 0, icon: L.divIcon({ className: '', html, iconSize: [28, 36], iconAnchor: [14, 34], popupAnchor: [0, -30] }) })
-        .bindPopup(`<b>${esc(x.name)}</b><br>${esc(x.desc)}<br><small>${x.verified ? (x.source.includes('openstreetmap') ? '좌표: OpenStreetMap' : '좌표: 공식 누리집 지도 링크') : '⚠ 위치 근사(예시)'} · <a href="${esc(x.source)}" target="_blank" rel="noopener">출처</a></small>`).addTo(layer);
+    m.markers.forEach((x, k) => {
+      if (!(cat === 'all' || x.cat === cat) || !match(x)) return;
+      const html = `<div class="badge ${x.verified ? '' : 'approx'} ${x.cat} ${x.major ? 'major' : ''}" style="--c:${color(x.cat)}"><b>${GLYPH[x.cat] || '•'}</b><em>${esc(short(x.name))}</em></div>`;
+      L.marker([x.lat, x.lng], { zIndexOffset: x.cat === 'venue' ? 1000 : 0, icon: L.divIcon({ className: '', html, iconSize: [34, 34], iconAnchor: [17, 17] }) })
+        .on('click', e => { L.DomEvent.stopPropagation(e); openSpot(x, k); }).addTo(layer);
       pts.push([x.lat, x.lng]);
     });
-    if (cat === 'all') map.setView(m.center, m.zoom); else if (pts.length > 1) map.fitBounds(pts, { padding: [60, 40], maxZoom: 17 }); else if (pts.length) map.setView(pts[0], 17);
+    if (!fit) return;
+    if (cat === 'all' && !term) map.setView(m.center, m.zoom); else if (pts.length > 1) map.fitBounds(pts, { padding: [60, 40], maxZoom: 17 }); else if (pts.length) map.setView(pts[0], 17);
   };
   draw();
+  const spot = +q0.get('spot'); if (q0.has('spot') && m.markers[spot]) openSpot(m.markers[spot], spot);
+  $('#mq').oninput = e => { term = e.target.value.trim(); sheet.hidden = true; draw(); };
   $$('.chip').forEach(c => c.onclick = () => { cat = c.dataset.cat; $$('.chip').forEach(o => o.classList.toggle('on', o === c)); draw(); });
   $('#locate').onclick = () => navigator.geolocation?.getCurrentPosition(p => { map.setView([p.coords.latitude, p.coords.longitude], 17); L.circleMarker([p.coords.latitude, p.coords.longitude], { radius: 8, color: '#2563eb' }).addTo(map); }, () => alert('위치 정보를 가져올 수 없습니다.'));
   cleanup.push(() => map.remove());
@@ -248,6 +276,32 @@ function Foundation() {
     </div></div></div>`;
 }
 
+// 분실물 찾기: 운영본부가 사진과 함께 등록하는 게시판(본 사업 구축 범위). 데모에는 실제 접수 자료가 없어 빈 목록과 접수 안내만 보여준다.
+function LostFound() {
+  const lf = DATA.lostFound;
+  root.innerHTML = `<div class="app"><div class="page">${subHeader('분실물 찾기')}
+    <div class="finfo" style="margin-top:12px">
+      <div class="info-card"><input class="lf-search" type="search" placeholder="물건 이름으로 검색 (예: 우산)" aria-label="분실물 검색" disabled></div>
+      <div class="info-card empty-lf"><h3>등록된 분실물이 없습니다</h3><p>${esc(lf.empty)}</p></div>
+      <div class="info-card"><h3 class="ctitle">분실물 접수·문의</h3><p class="cbody">${esc(lf.guide)}</p>
+        <button class="info-btn" data-url="${esc(lf.tel)}" style="margin-top:10px"><h1>종합상황실 전화 연결</h1><h2>${esc(lf.telLabel)}</h2></button></div>
+      <p class="srcnote">${esc(lf.note)}</p>
+    </div></div></div>`;
+}
+
+// 축제가 끝난 뒤 첫 방문 때 한 번 띄우는 종료 안내 (같은 탭에서는 다시 안 뜸)
+function endPopup() {
+  const q = route().query;
+  if (!DATA.endedNotice || todayISO() <= DATA.festival.endDate || q.has('nopop')) return;
+  try { if (sessionStorage.getItem('demo:endpop')) return; } catch { }
+  const el = document.createElement('div'); el.className = 'endpop';
+  el.innerHTML = `<div class="box"><p class="eyebrow">${esc(DATA.festival.name)}</p><h2>${esc(DATA.endPopup.title)}</h2><p>${esc(DATA.endPopup.body)}</p>
+    <button type="button" data-url="/foundation">재단 행사 캘린더 보기</button><button type="button" class="close">닫기</button></div>`;
+  const close = () => { el.remove(); try { sessionStorage.setItem('demo:endpop', '1'); } catch { } };
+  el.querySelector('.close').onclick = close; el.querySelector('[data-url]').onclick = () => { close(); navigate('/foundation'); };
+  document.body.appendChild(el); cleanup.push(() => el.remove());
+}
+
 function NotFound() {
   root.innerHTML = `<div class="nf"><div class="box"><p class="code">404</p><h1>페이지를 찾을 수 없어요</h1>
     <p class="d">요청하신 페이지가 없거나 주소가\n변경되었을 수 있어요.</p>
@@ -256,7 +310,7 @@ function NotFound() {
 
 const routes = [
   [/^\/$/, Home], [/^\/festival-info\/?$/, FestivalInfo], [/^\/program\/?$/, Program], [/^\/map\/?$/, MapPage],
-  [/^\/shuttle\/?$/, Shuttle], [/^\/parking\/?$/, Parking], [/^\/post\/(notice|event)\/?$/, m => Posts(m[1])], [/^\/faq\/?$/, Faq], [/^\/foundation\/?$/, Foundation],
+  [/^\/shuttle\/?$/, Shuttle], [/^\/parking\/?$/, Parking], [/^\/post\/(notice|event)\/?$/, m => Posts(m[1])], [/^\/faq\/?$/, Faq], [/^\/foundation\/?$/, Foundation], [/^\/lost\/?$/, LostFound],
 ];
 function render() {
   cleanup.forEach(fn => fn()); cleanup = [];

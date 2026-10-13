@@ -8,6 +8,8 @@
   <meta name="description" content="백제문화재단 주관 부여 축제(제72회 백제문화제 외) 모바일 안내 데모 — 영업 시연용, 공식 서비스 아님" />
   <meta property="og:title" content="부여 축제 안내 · 백제문화재단 (데모)" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
   <!-- Fonts: Pretendard, SUITE, Noto Serif KR (all SIL OFL) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUITE@2/fonts/variable/woff2/SUITE-Variable.css" />
@@ -20,5 +22,6 @@
   <script src="vendor/leaflet/leaflet.js"></script>
   <script src="data/festival.js"></script>
   <script src="js/app.bundle.js"></script>
+  <script>if ('serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('sw.js');</script>
 </body>
 </html>
