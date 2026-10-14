@@ -1,0 +1,34 @@
+[
+ {
+  "id": "hero",
+  "file": "img/hero.jpg",
+  "title": "오층석탑과 정림사지 전경1.jpg",
+  "author": "문화재청",
+  "license": "KOGL Type 1",
+  "url": "https://commons.wikimedia.org/wiki/File:%EC%98%A4%EC%B8%B5%EC%84%9D%ED%83%91%EA%B3%BC_%EC%A0%95%EB%A6%BC%EC%82%AC%EC%A7%80_%EC%A0%84%EA%B2%BD1.jpg"
+ },
+ {
+  "id": "highlights",
+  "file": "img/highlights.jpg",
+  "title": "오층석탑 좌측면.jpg",
+  "author": "문화재청",
+  "license": "KOGL Type 1",
+  "url": "https://commons.wikimedia.org/wiki/File:%EC%98%A4%EC%B8%B5%EC%84%9D%ED%83%91_%EC%A2%8C%EC%B8%A1%EB%A9%B4.jpg"
+ },
+ {
+  "id": "family",
+  "file": "img/family.jpg",
+  "title": "Gungnamji in 2026 (9).jpg",
+  "author": "Sadopaul",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Gungnamji_in_2026_(9).jpg"
+ },
+ {
+  "id": "night",
+  "file": "img/night.jpg",
+  "title": "Baekje Cultural Land 012 (9706834736).jpg",
+  "author": "travel oriented from Seoul, South Korea",
+  "license": "CC BY-SA 2.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Baekje_Cultural_Land_012_(9706834736).jpg"
+ }
+]

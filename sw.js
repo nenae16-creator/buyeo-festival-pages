@@ -1,14 +1,11 @@
-// 오프라인 캐시: 앱 화면·데이터는 캐시 우선(마지막으로 받은 안내를 통신이 끊겨도 표시), 지도 타일·외부 자원은 네트워크 우선.
-const CACHE = 'buyeo-demo-v1';
-const SHELL = ['./', 'index.html', 'css/style.css', 'js/app.bundle.js', 'data/festival.js', 'data/festival.json', 'vendor/leaflet/leaflet.css', 'vendor/leaflet/leaflet.js', 'assets/favicon.svg', 'manifest.webmanifest'];
-self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting())); });
-self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
-self.addEventListener('fetch', e => {
-  const u = new URL(e.request.url);
-  if (e.request.method !== 'GET') return;
-  if (u.origin === location.origin) {
-    // 데이터는 새 버전을 먼저 시도하고 실패하면 캐시 (변경 공지가 늦게 보이지 않게)
-    if (u.pathname.includes('/data/')) { e.respondWith(fetch(e.request).then(r => { caches.open(CACHE).then(c => c.put(e.request, r.clone())); return r; }).catch(() => caches.match(e.request))); return; }
-    e.respondWith(caches.match(e.request).then(r => r || fetch(e.request)));
-  }
+// 화면(html)·데이터(json)는 네트워크 우선 → 배포하면 바로 새 화면. 해시 붙은 assets·사진만 캐시 우선. 오프라인이면 캐시로.
+const CACHE = "festival-v2";
+self.addEventListener("install", e => { self.skipWaiting(); e.waitUntil(caches.open(CACHE).then(c => c.addAll(["./", "./festival.json"]))); });
+self.addEventListener("activate", e => e.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim())));
+self.addEventListener("fetch", e => {
+  const url = new URL(e.request.url);
+  if (e.request.method !== "GET" || url.origin !== location.origin) return;
+  const fresh = () => fetch(e.request).then(r => { if (r.ok) { const copy = r.clone(); caches.open(CACHE).then(c => c.put(e.request, copy)); } return r; });
+  const stable = /\/(assets|img)\//.test(url.pathname);
+  e.respondWith(stable ? caches.match(e.request).then(hit => hit || fresh()) : fresh().catch(() => caches.match(e.request)));
 });

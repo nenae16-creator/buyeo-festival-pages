@@ -1,1 +1,17 @@
-{"name":"부여 축제 안내 (데모)","short_name":"부여 축제","description":"백제문화재단 주관 부여 축제 모바일 안내 — 영업 시연용 데모","start_url":"./","scope":"./","display":"standalone","background_color":"#F3EDE1","theme_color":"#1E2A4A","lang":"ko","icons":[{"src":"assets/icon-192.png","sizes":"192x192","type":"image/png"},{"src":"assets/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}]}
+{
+ "name": "백제문화제 안내",
+ "short_name": "백제문화제",
+ "start_url": "./",
+ "scope": "./",
+ "display": "standalone",
+ "background_color": "#ffffff",
+ "theme_color": "#24335C",
+ "lang": "ko",
+ "icons": [
+  {
+   "src": "icon.svg",
+   "sizes": "any",
+   "type": "image/svg+xml"
+  }
+ ]
+}
